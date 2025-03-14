@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from website.views import TodoListView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('create', TodoListView.as_view(), name="Create Form"),
 ]
+
